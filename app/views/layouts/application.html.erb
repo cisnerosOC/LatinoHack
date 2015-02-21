@@ -2,22 +2,27 @@
 <html>
 	<head>
 		<title>LatinoHack</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		<% flash.each do |name, message| %>
-		<% if message != true%>
-		<div class="alert alert-<%= name %> alert-dismissible" role="alert">
-			<button type="button" class="close" data-dismiss="alert">
-				<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-			</button>
-			<%= message %>
+		<div class="container">
+			<% flash.each do |name, message| %>
+			<% if message != true%>
+			<div class="alert alert-<%= name %> alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<%= message %>
+			</div>
+			<% end %>
+			<% end %>
+			<%= yield %>
 		</div>
-		<% end %>
-		<% end %>
-		<%= yield %>
-
 	</body>
 </html>
+

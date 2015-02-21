@@ -15,6 +15,7 @@ gem 'bootstrap-sass'
 gem 'quiet_assets'
 gem 'simple_form'
 gem "devise"
+gem 'cancancan', '~> 1.10'
 
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
