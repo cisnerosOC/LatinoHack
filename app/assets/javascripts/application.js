@@ -15,6 +15,6 @@
 //= require turbolinks
 //= require angular
 //= require angular-animate
-//= require angular-mansory.js
+//= vendor/assessts/javascripts/require angular-mansory
 //= require bootstrap-sprockets
 //= require_tree .

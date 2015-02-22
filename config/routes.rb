@@ -10,10 +10,12 @@ Rails.application.routes.draw do
    end
 
    unauthenticated do
-     root 'devise/registrations#new', as: :unauthenticated_root
+     #root 'devise/registrations#new', as: :unauthenticated_root
+     root "home#index", as: :unauthenticated_root
    end
  end
   resources :stories
+  resources :home, only:[:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
