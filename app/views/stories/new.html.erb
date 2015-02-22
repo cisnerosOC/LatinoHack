@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-md-12">
+		<%= simple_form_for(@story) do |f| %>
+		<%= f.error_notification %>
+		<div class="form-inputs">
+			<div class=row>
+				<div class="col-md-12">
+					<%= f.input :post, as: :text, label: "Tell us your story"%>
+					<%= f.input :user_id, as: :hidden, :input_html=>{:value => current_user.id}%>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-actions">
+			<%= f.button :submit, "Submit" %>
+		</div>
+		<% end %>
+	</div>
+</div>
+
